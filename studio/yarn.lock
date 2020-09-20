@@ -968,6 +968,10 @@
     fs-extra "^6.0.1"
     promise-props-recursive "^1.0.0"
 
+"@sanity/cli@^1.150.7":
+  version "1.150.7"
+  resolved "https://registry.npmjs.org/@sanity/cli/-/cli-1.150.7.tgz#93d943b8ffa0bcf16bf255c926a25a2503143b33"
+
 "@sanity/client@1.150.7", "@sanity/client@^1.149.13":
   version "1.150.7"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-1.150.7.tgz#e05eec38becd5fc8db0ba11d30e406d17013b9de"

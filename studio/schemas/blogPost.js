@@ -1,18 +1,28 @@
 export default {
     name: 'blogPost',
-    title: 'Blog post',
+    title: 'Blog Posts',
     type: 'document',
     fields: [
       // ... other fields ...
       {
-        name: 'name',
-        title: 'Name',
+        name: 'title',
+        title: 'Title',
         type: 'string'
       },
       {
-        name: 'sponsor',
-        title: 'Sponsor',
-        type: 'sponsor'
-      }
+        name: 'description',
+        title: 'Description',
+        type: 'string'
+      },
+      {
+        name: 'link',
+        title: 'Link',
+        type: 'url'
+      },
+      {
+        name: 'publishDate',
+        title: 'Date Published',
+        type: 'date'
+      },
     ]
   }

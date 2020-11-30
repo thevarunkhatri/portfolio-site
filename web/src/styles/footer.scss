@@ -1,0 +1,54 @@
+footer {
+    background: #151515;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 75px;
+
+    .two-grid .footer-section {
+        border-top: 1px solid #fff;
+        padding-top: 15px;
+
+        .footerHeader {
+            font-size: 21px;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .aboutPara {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 21px;
+        }
+
+        .socialHeader {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .social-media {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            svg {
+                height: 25px;
+                margin-right: 15px;
+                fill: #d5d5d5
+            }
+        }
+
+        .copyright-container {
+            color: #d5d5d5;
+
+            p {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            .copyright {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -5,9 +5,9 @@ import "../styles/footerBlog.scss"
 const FooterBlog = props => {
 
   return (
-    <a class="footerBlogPost" href={props.link}>
-      <h1 class="blogTitle">/ {props.title}</h1>
-      <p class="blogDescription">{props.description}</p>
+    <a className="footerBlogPost" href={props.link}>
+      <h1 className="blogTitle">/ {props.title}</h1>
+      <p className="blogDescription">{props.description}</p>
     </a>
   )
 }

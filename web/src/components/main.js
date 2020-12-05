@@ -5,25 +5,20 @@ import { usePortfolioData } from "../hooks/portfolioData"
 import "../styles/main.scss"
 
 import PortfolioMainItem from "./portfolio-main-item"
+import PortfolioExtraItem from "./portfolio-extra-item"
+import PortfolioNav from "./portfolio-nav"
 
 const Main = props => {
     const portfolioData = usePortfolioData();
     console.log(portfolioData);
 
     const portfolioMainArray = portfolioData.allSanityPortfolioMainItem.edges;
-
+    const portfolioExtraArray = portfolioData.allSanityPortfolioExtraItem.edges;
   return (
     <main>
         <div className="container">
             <div className="portfolio-main">
-                <div className="portfolio-nav">
-                    <h2>Work</h2>
-                    <ul>
-                        <li>FireShield</li>
-                        <li>GoodReads</li>
-                        <li>Halo</li>
-                    </ul>
-                </div>
+                <PortfolioNav/>
                 <div className="portfolio-main-items">
                     {
                         portfolioMainArray.map(edge => 
@@ -46,7 +41,15 @@ const Main = props => {
                     <p>Web Development, Graphic Design & More</p>
                 </div>
                 <div className="three-grid">
-                    
+                    {
+                        portfolioExtraArray.map(edge => 
+                            (
+                                <PortfolioExtraItem 
+                                    image={edge.node.image.asset.fluid}
+                                />
+                            )
+                        )
+                    }
                 </div>
             </div>
         </div>

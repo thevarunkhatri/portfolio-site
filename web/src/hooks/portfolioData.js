@@ -21,6 +21,20 @@ export const usePortfolioData = () => {
                     }
                 }
             }
+            allSanityPortfolioExtraItem(sort: {fields: placement, order: ASC}) {
+                edges {
+                  node {
+                    name
+                    image {
+                      asset {
+                        fluid{
+                          ...GatsbySanityImageFluid
+                        }
+                      }
+                    }
+                  }
+                }
+            }
         }       
     `)
 

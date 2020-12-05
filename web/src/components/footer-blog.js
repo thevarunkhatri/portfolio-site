@@ -5,10 +5,12 @@ import "../styles/footerBlog.scss"
 const FooterBlog = props => {
 
   return (
-    <a className="footerBlogPost" href={props.link}>
-      <h1 className="blogTitle">/ {props.title}</h1>
-      <p className="blogDescription">{props.description}</p>
-    </a>
+    <div className="footerBlogPost">
+      <a href={props.link} target="_blank">
+        <h1 className="blogTitle">/ {props.title}</h1>
+        <p className="blogDescription">{props.description}</p>
+      </a>
+    </div>
   )
 }
 

@@ -19,6 +19,17 @@ footer {
             font-size: 16px;
             margin-bottom: 15px;
             line-height: 21px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    color: #F5CC00;
+                    font-weight: 700;
+                }
+            }
         }
 
         .socialHeader {
@@ -30,12 +41,21 @@ footer {
             display: flex;
             flex-direction: row;
             margin-bottom: 20px;
+            a {
+                svg {
+                    height: 25px;
+                    margin-right: 15px;
+                    fill: #d5d5d5;
+                    transition: all 300ms ease-in-out;
+                }
 
-            svg {
-                height: 25px;
-                margin-right: 15px;
-                fill: #d5d5d5
+                &:hover {
+                    svg {
+                        fill: #F5CC00;
+                    }
+                }
             }
+            
         }
 
         .copyright-container {

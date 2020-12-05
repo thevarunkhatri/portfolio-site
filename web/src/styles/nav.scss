@@ -3,6 +3,12 @@ nav {
     top: 70px;
     width: 100%;
 
+    &.fixed {
+        position: fixed;
+        top: 20px;
+        z-index: 100;
+    }
+
     .container {
         display: flex;
         align-items: center;
@@ -17,6 +23,11 @@ nav {
         .home {
             a {
                 font-weight: 700;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    font-weight: 1000;
+                }
             }
         }
 
@@ -24,9 +35,17 @@ nav {
             list-style: none;
             display: flex;
             margin: 0;
+            padding: 0;
+            width: 250px;
+            justify-content: space-between;
             
             li {
-                margin-left: 40px;
+                font-weight: 400;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    font-weight: 700;
+                }
             } 
         }
     }

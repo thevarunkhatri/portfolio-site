@@ -1,27 +1,23 @@
 main {
-    padding: 75px 0px 100px;
+    padding: 75px 0px 0px;
 
     .portfolio-main {
         display: grid;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 225px 1fr;
+        grid-template-areas: "sidebar main";
         gap: 20px;
-
-        .hide {
-            display: none;
-        }
 
         .portfolio-nav {
             border-top: 1px solid #000;
             padding-top: 20px;
-            
+            grid-area: sidebar;
+            z-index: -10;           
             
             &.fixed {
                 position: fixed;
                 top: 80px;
-
-                &::after{
-                    width: 100%
-                }
+                width: 100%;
+                max-width: 225px;
             }
 
             h2 {
@@ -39,9 +35,18 @@ main {
                 }
             }
         }
+
+        .portfolio-main-items {
+            grid-area: main;
+        }    
     }
 
+    
     .portfolio-extra {
+        background: #fff;
+        z-index: 100;
+        padding-bottom: 75px;
+        
         .portfolio-extra-header {
             border-top: 1px solid #000;
             padding-top: 20px;

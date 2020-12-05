@@ -5,7 +5,7 @@ import "../styles/hero.scss"
 const Hero = props => {
 
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
         <div className="container">
             <div className="tagline">
                 <TextLoop 

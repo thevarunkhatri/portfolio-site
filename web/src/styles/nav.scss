@@ -1,12 +1,18 @@
 nav {
     position: absolute;
-    top: 70px;
+    top: 50px;
     width: 100%;
+    transition: all 300ms ease-in-out;
+    padding: 20px 0;
 
     &.fixed {
         position: fixed;
-        top: 20px;
+        top: 0;
         z-index: 100;
+    }
+
+    &.white {
+        background: #fff;
     }
 
     .container {

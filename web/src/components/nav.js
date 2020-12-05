@@ -4,6 +4,7 @@ import "../styles/nav.scss"
 
 const Nav = () => {
   const [navSticky, setNavSticky] = useState(false);
+  const [navWhite, setNavWhite] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -19,10 +20,36 @@ const Nav = () => {
           setNavSticky(false);
         }
     }
+
+    var elem = document.querySelector('#hero');
+    var bounding = elem.getBoundingClientRect();
+    if (bounding.bottom < 40) {
+      if(!navWhite){
+        setNavWhite(true);
+      }
+    } else {
+      if(navWhite){
+        setNavWhite(false);
+      }
+    }
+  }
+
+  const navStyle = () => {
+    let navStyles;
+
+    if (navSticky) {
+      if (navWhite) {
+        navStyles = "fixed white"
+      } else {
+        navStyles = "fixed"
+      }
+    }
+
+    return navStyles;
   }
 
   return (
-    <nav className={navSticky ? 'fixed' : ''}>
+    <nav className={navStyle()}>
         <div className="container">
             <div className="home">
                 <Link to="/">/thevarunkhatri</Link>

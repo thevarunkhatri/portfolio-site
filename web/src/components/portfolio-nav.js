@@ -21,18 +21,14 @@ const PortfolioNav = (props) => {
   }
 
   return (
-    <>
-        <div className={sticky ? 'fixed portfolio-nav' : 'portfolio-nav'}>
-            <h2>Work</h2>
-            <ul>
-                <li>FireShield</li>
-                <li>GoodReads</li>
-                <li>Halo</li>
-            </ul>
-        </div>
-        <div className={sticky ? 'show' : 'hide'}>
-        </div>
-    </>
+    <div className={sticky ? 'fixed portfolio-nav' : 'portfolio-nav'}>
+        <h2>Work</h2>
+        <ul>
+            <li>FireShield</li>
+            <li>GoodReads</li>
+            <li>Halo</li>
+        </ul>
+    </div>
   )
 }
 

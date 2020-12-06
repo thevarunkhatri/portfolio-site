@@ -2,12 +2,18 @@ import React, {useState, useEffect} from "react"
 import { Link } from 'gatsby'
 import "../styles/nav.scss"
 
-const Nav = () => {
+import Resume from "../assets/resume.pdf";
+
+const Nav = props => {
   const [navSticky, setNavSticky] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    return function cleanup() {
+      window.removeEventListener("scroll", handleScroll)
+    };
   });
 
   const handleScroll = () => {
@@ -21,7 +27,7 @@ const Nav = () => {
         }
     }
 
-    var elem = document.querySelector('#hero');
+    var elem = document.querySelector(props.scrollPoint);
     var bounding = elem.getBoundingClientRect();
     if (bounding.bottom < 40) {
       if(!navWhite){
@@ -57,7 +63,7 @@ const Nav = () => {
             <ul className="nav-items">
                 <li><a href="https://medium.com/@thevarunkhatri" target="_blank">/write</a></li>
                 <li><Link to="/about">/about</Link></li>
-                <li><a href="" target="_blank">/resume</a></li>
+                <li><a href={Resume} target="_blank">/resume</a></li>
             </ul>
         </div>
     </nav>

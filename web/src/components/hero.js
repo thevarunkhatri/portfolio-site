@@ -12,7 +12,7 @@ const Hero = props => {
                   interval={2500} 
                   springConfig={{ stiffness: 220, damping: 18 }} 
                   className="changingTag">
-                    <h1>Sparking delight in user through</h1>
+                    <h1>Sparking delight in users through</h1>
                     <h1>Synthesizing data to create</h1>
                     <h1>Prototyping with code to test</h1>
                     <h1>Referencing game design to inspire</h1>

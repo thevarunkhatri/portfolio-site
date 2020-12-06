@@ -15,7 +15,7 @@ const Main = props => {
     const portfolioMainArray = portfolioData.allSanityPortfolioMainItem.edges;
     const portfolioExtraArray = portfolioData.allSanityPortfolioExtraItem.edges;
   return (
-    <main>
+    <main className="homeMain">
         <div className="container">
             <div className="portfolio-main">
                 <PortfolioNav/>

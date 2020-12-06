@@ -9,7 +9,7 @@ import "../styles/portfolioMainItem.scss"
 const portfolioMainItem = (props) => {
   return (
     <Link to="/">
-      <div className="portfolioMainItem" id={props.anchor}>
+      <div className="portfolioMainItem" id={props.name}>
           <div class="projectInfo">
               <p className="projectType">{props.type}</p>
               <h2 className="projectName">{props.name}</h2>

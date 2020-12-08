@@ -7,6 +7,10 @@ const PortfolioNav = (props) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    return function cleanup() {
+      window.removeEventListener("scroll", handleScroll)
+    };
   });
   
   const handleScroll = () => {

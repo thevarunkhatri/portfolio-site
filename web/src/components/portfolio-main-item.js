@@ -10,7 +10,7 @@ const portfolioMainItem = (props) => {
   return (
     <Link to="/">
       <div className="portfolioMainItem" id={props.name}>
-          <div class="projectInfo">
+          <div className="projectInfo">
               <p className="projectType">{props.type}</p>
               <h2 className="projectName">{props.name}</h2>
               <p className="projectDescription">{props.description}</p>
@@ -22,8 +22,8 @@ const portfolioMainItem = (props) => {
 
               <div className="learnMore">Learn More <Arrow/></div>
           </div>
-          <div class="projectImage">
-              {/*<Img fluid={props.image}/>*/}
+          <div className="projectImage">
+              <Img fluid={props.image}/>
           </div>
       </div>
     </Link>

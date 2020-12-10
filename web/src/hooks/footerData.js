@@ -11,6 +11,7 @@ export const useFooterData = () => {
                         title
                         description
                         link
+                        id
                     }
                 }
             }

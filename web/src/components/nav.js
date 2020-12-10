@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import { Link } from 'gatsby'
 import "../styles/nav.scss"
 
@@ -62,9 +62,9 @@ const Nav = props => {
                 <Link to="/">/thevarunkhatri</Link>
             </div>
             <ul className="nav-items">
-                <li><a href="https://medium.com/@thevarunkhatri" target="_blank">/write</a></li>
+                <li><a href="https://medium.com/@thevarunkhatri" target="_blank" rel="noreferrer" >/write</a></li>
                 <li><Link to="/about">/about</Link></li>
-                <li><a href={Resume} target="_blank">/resume</a></li>
+                <li><a href={Resume} target="_blank" rel="noreferrer">/resume</a></li>
             </ul>
         </div>
     </nav>

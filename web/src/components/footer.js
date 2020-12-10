@@ -40,10 +40,10 @@ const Footer = props => {
 
                     <h2 className="socialHeader">Get in touch</h2>
                     <div className="social-media">
-                        <a href="https://www.linkedin.com/in/varunmk/" target="_blank"><Linkedin/></a>
-                        <a href="https://dribbble.com/thevarunkhatri" target="_blank"><Dribbble/></a>
-                        <a href="https://github.com/thevarunkhatri" target="_blank"><Github/></a>
-                        <a href="https://www.instagram.com/thevarunkhatri/?hl=en" target="_blank"><Instagram/></a>
+                        <a href="https://www.linkedin.com/in/varunmk/" target="_blank" rel="noreferrer"><Linkedin/></a>
+                        <a href="https://dribbble.com/thevarunkhatri" target="_blank" rel="noreferrer"><Dribbble/></a>
+                        <a href="https://github.com/thevarunkhatri" target="_blank" rel="noreferrer"><Github/></a>
+                        <a href="https://www.instagram.com/thevarunkhatri/?hl=en" target="_blank" rel="noreferrer"><Instagram/></a>
                     </div>
 
                     <div className="copyright-container">
@@ -51,7 +51,7 @@ const Footer = props => {
                             <p>Website hand-coded by yours truly.</p>
                             <p>(c) Varun Khatri 2020</p>
                         </div>
-                        <p>Icons made by Freepik from <a>www.flaticon.com</a></p>
+                        <p>Icons made by Freepik from <a href="https://www.flaticon.com/" target="_blank" rel="noreferrer">www.flaticon.com</a></p>
                     </div>
                 </div>
                 <div className="footer-section">
@@ -59,7 +59,8 @@ const Footer = props => {
                     {
                         blogPostArray.map(edge => 
                             (
-                                <FooterBlog 
+                                <FooterBlog
+                                    key={edge.node.id} 
                                     title={edge.node.title}
                                     description={edge.node.description}
                                     link={edge.node.link}/>

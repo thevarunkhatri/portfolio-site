@@ -6,7 +6,7 @@ const FooterBlog = props => {
 
   return (
     <div className="footerBlogPost">
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noreferrer">
         <h1 className="blogTitle">/ {props.title}</h1>
         <p className="blogDescription">{props.description}</p>
       </a>

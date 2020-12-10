@@ -1,8 +1,7 @@
 import React from "react"
 
 import FooterBlog from "./footer-blog";
-import { useFooterData } from "../hooks/footerData";
-import {Link} from "gatsby";
+import {Link, useStaticQuery, graphql} from "gatsby";
 
 import Instagram from "../assets/instagram.svg";
 import Linkedin from "../assets/linkedin.svg";
@@ -13,7 +12,21 @@ import "../styles/footer.scss";
 
 const Footer = props => {
 
-    const footerData = useFooterData();
+    const footerData = useStaticQuery(graphql`
+        query blogPostQuery {
+            allSanityBlogPost(sort: {fields: publishDate, order: DESC}, limit: 3) {
+                edges {
+                    node {
+                        id
+                        title
+                        description
+                        link
+                    }
+                }
+            }
+        }           
+    `)
+
     const blogPostArray = footerData.allSanityBlogPost.edges;
 
     return (

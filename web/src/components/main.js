@@ -1,6 +1,5 @@
 import React from "react"
-
-import { usePortfolioData } from "../hooks/portfolioData"
+import {useStaticQuery, graphql} from "gatsby"
 
 import "../styles/main.scss"
 
@@ -9,8 +8,28 @@ import PortfolioExtraItem from "./portfolio-extra-item"
 import PortfolioNav from "./portfolio-nav"
 
 const Main = props => {
-    const portfolioData = usePortfolioData();
-    console.log(portfolioData);
+    const portfolioData = useStaticQuery(graphql`
+        query portfolioQuery {
+            allSanityPortfolioMainItem(sort: {fields: placement, order: ASC}) {
+                edges {
+                    node {
+                        name
+                        description
+                        tags
+                        type
+                    }
+                }
+            }
+            allSanityPortfolioExtraItem(sort: {fields: placement, order: ASC}) {
+                edges {
+                node {
+                    name
+                    
+                }
+                }
+            }
+        }       
+    `)
 
     const portfolioMainArray = portfolioData.allSanityPortfolioMainItem.edges;
     const portfolioExtraArray = portfolioData.allSanityPortfolioExtraItem.edges;

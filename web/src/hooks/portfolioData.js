@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export const usePortfolioData = () => {
     const data = useStaticQuery(graphql`
-        query portfolioQuery {
+        query portfolioQuery2 {
             allSanityPortfolioMainItem(sort: {fields: placement, order: ASC}) {
                 edges {
                     node {

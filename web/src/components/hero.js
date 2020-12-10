@@ -9,7 +9,6 @@ const Hero = props => {
         <div className="container">
             <div className="tagline">
                 <h1>Sparking delight in users through</h1>
-                {/*
                 <TextLoop 
                   interval={2500} 
                   springConfig={{ stiffness: 220, damping: 18 }} 
@@ -19,7 +18,6 @@ const Hero = props => {
                     <h1>Prototyping with code to test</h1>
                     <h1>Referencing game design to inspire</h1>
                 </TextLoop>
-                */}
                 <h1>fluent experiences rooted in</h1>
                 <h1>human-centered design</h1>
             </div>

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import {Link} from "gatsby";
 
 const PortfolioNav = (props) => {
+  /*
   const [sticky, setSticky] = useState(false);
   const [highlightedItem, setHighlightedItem] = useState(1);
 
@@ -50,14 +51,14 @@ const PortfolioNav = (props) => {
       console.log("set as 1");
     }
   }
-
+  */
   return (
-    <div className={sticky ? 'fixed portfolio-nav' : 'portfolio-nav'}>
+    <div className="portfolio-nav">
         <h2>Work</h2>
         <ul>
-            <li className={(highlightedItem == 1) ? 'selected' : ''}>FireShield</li>
-            <li className={(highlightedItem == 2) ? 'selected' : ''}>GoodReads</li>
-            <li className={(highlightedItem == 3) ? 'selected' : ''}>Halo</li>
+            <li>GoodReads</li>
+            <li>FireShield</li>
+            <li>Halo</li>
         </ul>
     </div>
   )

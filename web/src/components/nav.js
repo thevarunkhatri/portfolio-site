@@ -5,6 +5,7 @@ import "../styles/nav.scss"
 import Resume from "../assets/resume.pdf";
 
 const Nav = props => {
+  /*
   const [navSticky, setNavSticky] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
 
@@ -15,7 +16,7 @@ const Nav = props => {
       window.removeEventListener("scroll", handleScroll)
     };
   });
-
+  
   const handleScroll = () => {
     if (window.pageYOffset > 50) {
         if(!navSticky){
@@ -53,9 +54,9 @@ const Nav = props => {
 
     return navStyles;
   }
-
+  */
   return (
-    <nav className={navStyle()}>
+    <nav>
         <div className="container">
             <div className="home">
                 <Link to="/">/thevarunkhatri</Link>

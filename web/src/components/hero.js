@@ -8,7 +8,6 @@ const Hero = props => {
     <div className="hero" id="hero">
         <div className="container">
             <div className="tagline">
-                <h1>Sparking delight in users through</h1>
                 <TextLoop 
                   interval={2500} 
                   springConfig={{ stiffness: 220, damping: 18 }} 

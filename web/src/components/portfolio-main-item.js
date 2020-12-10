@@ -23,7 +23,7 @@ const portfolioMainItem = (props) => {
               <div className="learnMore">Learn More <Arrow/></div>
           </div>
           <div class="projectImage">
-              <Img fluid={props.image}/>
+              {/*<Img fluid={props.image}/>*/}
           </div>
       </div>
     </Link>

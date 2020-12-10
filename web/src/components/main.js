@@ -28,7 +28,7 @@ const Main = props => {
                                     description={edge.node.description}
                                     tags={edge.node.tags}
                                     type={edge.node.type}
-                                    image={edge.node.bannerImage.asset.fluid}
+                                    //image={edge.node.bannerImage.asset.fluid}
                                 />
                             )
                         )
@@ -45,7 +45,7 @@ const Main = props => {
                         portfolioExtraArray.map(edge => 
                             (
                                 <PortfolioExtraItem 
-                                    image={edge.node.image.asset.fluid}
+                                    //image={edge.node.image.asset.fluid}
                                 />
                             )
                         )

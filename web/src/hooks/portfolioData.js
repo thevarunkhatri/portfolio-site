@@ -9,13 +9,6 @@ export const usePortfolioData = () => {
                     node {
                         name
                         description
-                        bannerImage {
-                            asset {
-                                fluid {
-                                    ...GatsbySanityImageFluid
-                                }
-                            }
-                        }
                         tags
                         type
                     }
@@ -25,13 +18,7 @@ export const usePortfolioData = () => {
                 edges {
                   node {
                     name
-                    image {
-                      asset {
-                        fluid{
-                          ...GatsbySanityImageFluid
-                        }
-                      }
-                    }
+                    
                   }
                 }
             }
@@ -40,3 +27,23 @@ export const usePortfolioData = () => {
 
     return data;
 }
+
+/*
+
+  image {
+    asset {
+      fluid{
+        ...GatsbySanityImageFluid
+      }
+    }
+  }
+  
+  bannerImage {
+    asset {
+      fluid {
+          ...GatsbySanityImageFluid
+      }
+    }
+  }
+
+*/
